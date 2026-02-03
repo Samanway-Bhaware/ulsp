@@ -10,7 +10,6 @@
 ### **Nanosecond-Precision Timing**
 
 * **macOS** → `mach_absolute_time`
-
 * **Linux** → `clock_gettime(CLOCK_MONOTONIC_RAW)`
 
 * **Windows** → `QueryPerformanceCounter (QPC)`

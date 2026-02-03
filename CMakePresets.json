@@ -1,0 +1,46 @@
+{
+  "version": 3,
+  "cmakeMinimumRequired": {
+    "major": 3,
+    "minor": 20,
+    "patch": 0
+  },
+  "configurePresets": [
+    {
+      "name": "default",
+      "displayName": "Default Config",
+      "description": "Default build options",
+      "binaryDir": "${sourceDir}/build",
+      "generator": "Ninja" 
+    },
+    {
+      "name": "release",
+      "inherits": "default",
+      "displayName": "Release Build",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release",
+        "ULSP_BUILD_EXAMPLES": "ON",
+        "ULSP_BUILD_SHARED": "OFF"
+      }
+    },
+    {
+      "name": "dev",
+      "inherits": "default",
+      "displayName": "Debug Build",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug",
+        "ULSP_BUILD_EXAMPLES": "ON"
+      }
+    }
+  ],
+  "buildPresets": [
+    {
+      "name": "release",
+      "configurePreset": "release"
+    },
+    {
+      "name": "dev",
+      "configurePreset": "dev"
+    }
+  ]
+}
