@@ -3,10 +3,6 @@
 **ulsp** is a production-grade C++20 library for high-performance systems engineers.  
  It provides a **Google Benchmark–style API** for measuring micro-architectural and operating system latencies with **nanosecond precision** across macOS, Linux, and Windows.
 
-Designed for:
-
-High-Frequency Trading · Game Engines · Real-Time Systems · Low-Latency Infrastructure
-
 ---
 
 ## **✨ Key Features**
@@ -19,14 +15,12 @@ High-Frequency Trading · Game Engines · Real-Time Systems · Low-Latency Infra
 
 * **Windows** → `QueryPerformanceCounter (QPC)`
 
-  ### **Zero-Boilerplate Benchmark API**
-
 Define benchmarks using a single macro:
 
 `ULSP_BENCHMARK(MyBenchmark) {`
 
     `// code to measure`
-
+    
 `}`
 
 ### **Optimizer-Safe**
@@ -38,11 +32,8 @@ Built-in `DoNotOptimize()` prevents the compiler from eliminating benchmarked co
 Automatically reports:
 
 * Mean
-
 * p50
-
 * p95
-
 * p99
 
   ### **Installable & Relocatable**
@@ -79,26 +70,13 @@ This installs:
 
   ---
 
-  ### **Option B — Add as Submodule (Vendoring)**
-
-  `git submodule add https://github.com/<your-org>/ulsp.git external/ulsp`  
-    
-  `add_subdirectory(external/ulsp)`  
-  `target_link_libraries(my_app PRIVATE ulsp::benchmark)`  
-    
-  ---
-
   ## **🛠 Build Requirements**
 
 * CMake ≥ 3.20
-
 * C++20 Compiler
-
-  * GCC 10+
-
-  * Clang 10+
-
-  * MSVC 19.28+
+* GCC 10+
+* Clang 10+
+* MSVC 19.28+
 
   ---
 
@@ -110,9 +88,7 @@ This installs:
 
   `project(MyProject LANGUAGES CXX)`
 
-
   `find_package(ulsp REQUIRED)`
-
 
   `add_executable(my_app main.cpp)`
 
@@ -145,7 +121,6 @@ This installs:
 
   `}`
 
-
   `int main() {`
 
       `ulsp::benchmark::RunAll();`
@@ -153,7 +128,6 @@ This installs:
       `return 0;`
 
   `}`
-
 
   ---
 
@@ -196,12 +170,4 @@ Defaults:
 * Hardware and architecture comparison
 
   ---
-
-  ## **🧱 Architecture Overview**
-
-  `include/ulsp/     Public headers`  
-  `src/              Private implementation`  
-  `cmake/            CMake config templates`  
-  `examples/         Usage examples`
-
 
