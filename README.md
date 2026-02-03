@@ -45,7 +45,7 @@ Fully CMake-integrated and discoverable via:
 
 ## **📥 Getting ulsp**
 
-### **Option A — Git Clone \+ CMake Install (Recommended)**
+### **Git Clone \+ CMake Install (Recommended)**
 
 `git clone https://github.com/<your-org>/ulsp.git`
 
